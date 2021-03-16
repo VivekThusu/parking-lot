@@ -33,7 +33,7 @@ public class ParkingLotManager {
         BufferedReader br = null;
         InputStream propInputStream = null;
         try {
-            propInputStream = ParkingLotApp.class.getClassLoader().getResourceAsStream("application.properties");
+            propInputStream = getClass().getClassLoader().getResourceAsStream("application.properties");
             Properties prop = new Properties();
             prop.load(propInputStream);
 

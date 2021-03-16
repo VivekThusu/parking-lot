@@ -35,7 +35,7 @@ public class ParkingLot {
             driverAgeToParkingSpaceMap = ArrayListMultimap.create();
         }
         if(Objects.isNull(availableParkingSlots)) {
-            availableParkingSlots = new PriorityQueue<>(numberOfParkingSpaces);
+            availableParkingSlots = new PriorityQueue<>(numberOfParkingSpaces+1);
             for(int i = 1; i <= numberOfParkingSpaces; i++) {
                 availableParkingSlots.add(i);
             }
@@ -49,6 +49,13 @@ public class ParkingLot {
     public static ParkingLot getInstance(int numberOfParkingSpaces) {
         ParkingLot parkingLot = InnerParkingLot.parkingLot;
         parkingLot.init(numberOfParkingSpaces);
+        return parkingLot;
+    }
+
+    public static ParkingLot getTestInstance(int totalNumberOfParkingSpaces) {
+        System.out.println("vivek  thusu");
+        ParkingLot parkingLot = new ParkingLot();
+        parkingLot.init(totalNumberOfParkingSpaces);
         return parkingLot;
     }
 
