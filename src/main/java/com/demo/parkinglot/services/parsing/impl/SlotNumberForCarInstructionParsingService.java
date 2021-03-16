@@ -9,6 +9,10 @@ import com.demo.parkinglot.util.InstructionParsingUtil;
 import static com.demo.parkinglot.util.InstructionParsingUtil.SLOT_NUMBER_FOR_CAR_WITH_NUMBER_REGEX;
 import static com.demo.parkinglot.util.InstructionServiceUtil.SLOT_NUMBER_FOR_CAR_WITH_NUMBER;
 
+/*
+ * This class is responsible for parsing SlotNumberForCar instructions.
+ * Throws ParkingLotException in case of errors
+ * */
 public class SlotNumberForCarInstructionParsingService implements InstructionParsingService {
 
     @Override

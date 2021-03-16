@@ -9,6 +9,10 @@ import com.demo.parkinglot.util.InstructionParsingUtil;
 import static com.demo.parkinglot.util.InstructionParsingUtil.SLOT_NUMBERS_FOR_DRIVER_OF_AGE_REGEX;
 import static com.demo.parkinglot.util.InstructionServiceUtil.SLOT_NUMBERS_FOR_DRIVER_OF_AGE;
 
+/*
+ * This class is responsible for parsing SlotNumbersForDriverAge instructions.
+ * Throws ParkingLotException in case of errors
+ * */
 public class SlotNumbersForDriverInstructionParsingService implements InstructionParsingService {
 
     @Override

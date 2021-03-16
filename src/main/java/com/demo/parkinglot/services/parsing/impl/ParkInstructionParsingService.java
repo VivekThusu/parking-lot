@@ -9,6 +9,10 @@ import com.demo.parkinglot.util.InstructionParsingUtil;
 import static com.demo.parkinglot.util.InstructionParsingUtil.PARK_REGEX;
 import static com.demo.parkinglot.util.InstructionServiceUtil.PARK;
 
+/*
+* This class is responsible for parsing Park instructions.
+* Throws ParkingLotException in case of errors
+* */
 public class ParkInstructionParsingService implements InstructionParsingService {
 
     @Override

@@ -17,6 +17,10 @@ public class ParkInstruction implements InstructionService {
     private static final String MESSAGE = "Car with vehicle registration number \"{0}\" has been parked at slot number {1}";
     private static final String PARKING_FULL = "ERROR : Parking Lot is full or vehicle already parked. You cannot park your vehicle";
 
+    /*
+    * checks if slots are available and a vehicle with regNum is not already parked
+    * allots a parking space to the vehicle. Updates ParkingLot object.
+    * */
     @Override
     public String perform(ParkingLot parkingLot, ParkingSpace parkingSpace) {
         Integer availableSlot = parkingLot.getAvailableParkingSlots().poll();

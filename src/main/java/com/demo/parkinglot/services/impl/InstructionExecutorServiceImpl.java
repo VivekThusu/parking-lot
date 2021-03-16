@@ -16,6 +16,7 @@ public class InstructionExecutorServiceImpl implements InstructionExecutorServic
     @Override
     public void executeInstruction(ParkingLot parkingLot, ParkingSpace parkingSpace, String instruction) {
         try {
+            //get instruction service based on type of instruction
             InstructionService instructionService = InstructionServiceUtil.getInstructionService(instruction);
             String message = instructionService.perform(parkingLot, parkingSpace);
             System.out.println(message);
@@ -27,6 +28,7 @@ public class InstructionExecutorServiceImpl implements InstructionExecutorServic
     @Override
     public Pair<String, ParkingSpace> parseInstruction(String instructionText) {
         try {
+            //get parsing instruction service based on type of instruction
             InstructionParsingService instructionParsingService =
                     InstructionParsingUtil.getInstructionParsingService(instructionText);
             return instructionParsingService.parseInstructionPerType(instructionText);

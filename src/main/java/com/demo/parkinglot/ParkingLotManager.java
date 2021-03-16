@@ -17,6 +17,10 @@ import java.util.Properties;
 import static com.demo.parkinglot.util.InstructionParsingUtil.CREATE_PARKING_LOT;
 import static com.demo.parkinglot.util.InstructionParsingUtil.CREATE_PARKING_LOT_REGEX;
 
+/*
+* This class is responsible for reading the input text file, parse it and then call the
+* respective services to perform the instructions.
+* */
 public class ParkingLotManager {
 
     private final InstructionExecutorService instructionExecutorService;

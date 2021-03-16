@@ -9,6 +9,10 @@ import com.demo.parkinglot.util.InstructionParsingUtil;
 import static com.demo.parkinglot.util.InstructionParsingUtil.LEAVE_REGEX;
 import static com.demo.parkinglot.util.InstructionServiceUtil.LEAVE;
 
+/*
+ * This class is responsible for parsing Leave instructions.
+ * Throws ParkingLotException in case of errors
+ * */
 public class LeaveInstructionParsingService implements InstructionParsingService {
 
     @Override
