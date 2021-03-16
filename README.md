@@ -9,6 +9,8 @@ This is a sample parking lot which allows the following features :
 
 ## How to build the application
 
+`Note`: Basic requirement - maven and java8 to build and run the application
+
 * Run the below command to build the project
 ```bash
 mvn clean install
