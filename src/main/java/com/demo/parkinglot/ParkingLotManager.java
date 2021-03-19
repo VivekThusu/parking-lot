@@ -6,7 +6,7 @@ import com.demo.parkinglot.model.ParkingSpace;
 import com.demo.parkinglot.services.InstructionExecutorService;
 import com.demo.parkinglot.util.InstructionParsingUtil;
 import com.google.common.base.Strings;
-import javafx.util.Pair;
+import org.apache.commons.lang3.tuple.Pair;
 
 import java.io.*;
 import java.text.MessageFormat;

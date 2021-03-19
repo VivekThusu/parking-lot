@@ -1,10 +1,10 @@
 package com.demo.parkinglot.services.parsing.impl;
 
 import com.demo.parkinglot.exceptions.ParkingLotException;
-import javafx.util.Pair;
 import com.demo.parkinglot.model.ParkingSpace;
 import com.demo.parkinglot.services.parsing.InstructionParsingService;
 import com.demo.parkinglot.util.InstructionParsingUtil;
+import org.apache.commons.lang3.tuple.Pair;
 
 import static com.demo.parkinglot.util.InstructionParsingUtil.LEAVE_REGEX;
 import static com.demo.parkinglot.util.InstructionServiceUtil.LEAVE;
@@ -20,7 +20,7 @@ public class LeaveInstructionParsingService implements InstructionParsingService
 
         if (!InstructionParsingUtil.containsParsingError(LEAVE_REGEX, instructionText)) {
             String[] inputInstructionTokens = instructionText.split(" ");
-            return new Pair<>(LEAVE,
+            return Pair.of(LEAVE,
                     ParkingSpace.builder()
                             .parkingSlot(Integer.parseInt(inputInstructionTokens[1]))
                             .build());

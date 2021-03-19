@@ -1,10 +1,10 @@
 package com.demo.parkinglot.services.parsing.impl;
 
 import com.demo.parkinglot.exceptions.ParkingLotException;
-import javafx.util.Pair;
 import com.demo.parkinglot.model.ParkingSpace;
 import com.demo.parkinglot.services.parsing.InstructionParsingService;
 import com.demo.parkinglot.util.InstructionParsingUtil;
+import org.apache.commons.lang3.tuple.Pair;
 
 import static com.demo.parkinglot.util.InstructionParsingUtil.SLOT_NUMBERS_FOR_DRIVER_OF_AGE_REGEX;
 import static com.demo.parkinglot.util.InstructionServiceUtil.SLOT_NUMBERS_FOR_DRIVER_OF_AGE;
@@ -20,7 +20,7 @@ public class SlotNumbersForDriverInstructionParsingService implements Instructio
 
         if (!InstructionParsingUtil.containsParsingError(SLOT_NUMBERS_FOR_DRIVER_OF_AGE_REGEX, instructionText)) {
             String[] inputInstructionTokens = instructionText.split(" ");
-            return new Pair<>(SLOT_NUMBERS_FOR_DRIVER_OF_AGE,
+            return Pair.of(SLOT_NUMBERS_FOR_DRIVER_OF_AGE,
                     ParkingSpace.builder().driverAge(Integer.parseInt(inputInstructionTokens[1]))
                             .build());
         } else {

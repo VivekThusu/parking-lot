@@ -1,8 +1,8 @@
 package com.demo.parkinglot.services;
 
-import javafx.util.Pair;
 import com.demo.parkinglot.model.ParkingLot;
 import com.demo.parkinglot.model.ParkingSpace;
+import org.apache.commons.lang3.tuple.Pair;
 
 public interface InstructionExecutorService {
 

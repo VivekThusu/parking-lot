@@ -2,10 +2,11 @@ package com.demo.parkinglot.services.parsing.impl;
 
 import com.demo.parkinglot.exceptions.ParkingLotException;
 import com.demo.parkinglot.model.ParkingSpace;
-import javafx.util.Pair;
+import org.apache.commons.lang3.tuple.Pair;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class VehicleRegNumberInstructionParsingServiceTest {
 

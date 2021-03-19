@@ -1,10 +1,10 @@
 package com.demo.parkinglot.services.parsing.impl;
 
 import com.demo.parkinglot.exceptions.ParkingLotException;
-import javafx.util.Pair;
 import com.demo.parkinglot.model.ParkingSpace;
 import com.demo.parkinglot.services.parsing.InstructionParsingService;
 import com.demo.parkinglot.util.InstructionParsingUtil;
+import org.apache.commons.lang3.tuple.Pair;
 
 import static com.demo.parkinglot.util.InstructionParsingUtil.PARK_REGEX;
 import static com.demo.parkinglot.util.InstructionServiceUtil.PARK;
@@ -20,7 +20,7 @@ public class ParkInstructionParsingService implements InstructionParsingService 
 
         if (!InstructionParsingUtil.containsParsingError(PARK_REGEX, instructionText)) {
             String[] inputInstructionTokens = instructionText.split(" ");
-            return new Pair<>(PARK,
+            return Pair.of(PARK,
                     ParkingSpace.builder().registrationNumber(inputInstructionTokens[1])
                             .driverAge(Integer.parseInt(inputInstructionTokens[3]))
                             .build());

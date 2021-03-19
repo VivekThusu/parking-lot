@@ -1,7 +1,6 @@
 package com.demo.parkinglot.services.impl;
 
 import com.demo.parkinglot.exceptions.ParkingLotException;
-import javafx.util.Pair;
 import com.demo.parkinglot.model.ParkingLot;
 import com.demo.parkinglot.model.ParkingSpace;
 import com.demo.parkinglot.services.InstructionExecutorService;
@@ -9,6 +8,7 @@ import com.demo.parkinglot.services.instruction.InstructionService;
 import com.demo.parkinglot.services.parsing.InstructionParsingService;
 import com.demo.parkinglot.util.InstructionParsingUtil;
 import com.demo.parkinglot.util.InstructionServiceUtil;
+import org.apache.commons.lang3.tuple.Pair;
 
 
 public class InstructionExecutorServiceImpl implements InstructionExecutorService {
@@ -35,7 +35,7 @@ public class InstructionExecutorServiceImpl implements InstructionExecutorServic
         }
         catch (ParkingLotException e) {
             //return dummy pair for which we will print error message on the console
-            return new Pair<>(instructionText, null);
+            return Pair.of(instructionText, null);
         }
     }
 }

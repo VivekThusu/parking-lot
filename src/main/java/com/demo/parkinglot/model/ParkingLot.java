@@ -53,7 +53,6 @@ public class ParkingLot {
     }
 
     public static ParkingLot getTestInstance(int totalNumberOfParkingSpaces) {
-        System.out.println("vivek  thusu");
         ParkingLot parkingLot = new ParkingLot();
         parkingLot.init(totalNumberOfParkingSpaces);
         return parkingLot;
